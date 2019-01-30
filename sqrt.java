@@ -4,6 +4,12 @@ public class sqrt{
 	}
 	
 	public static double sqrtHelper(double n, double guess) {
+		if(n == 0) {
+			return 0;
+		}
+		if(n < 0) {
+			return null;
+		}
 		if(Math.abs((guess * guess) - n) > 0.00001) {
 			return sqrtHelper(n,((n / guess) + guess) / 2);
 		}
